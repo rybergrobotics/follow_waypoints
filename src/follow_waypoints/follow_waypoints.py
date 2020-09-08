@@ -147,7 +147,7 @@ class GetPath(State):
         start_journey_thread = threading.Thread(target=wait_for_start_journey)
         start_journey_thread.start()
 
-        topic = "/initialpose"
+        topic = "/waypoint"
         rospy.loginfo("Waiting to recieve waypoints via Pose msg on topic %s" % topic)
         rospy.loginfo("To start following waypoints: 'rostopic pub /path_ready std_msgs/Empty -1'")
         rospy.loginfo("OR")
